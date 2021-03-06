@@ -1,34 +1,47 @@
-.Feedback {
-  margin: 40px;
-  width: 400px;
-  padding: 10px;
+.Form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+  padding: 20px;
   border: 1px solid black;
   text-align: center;
   font-weight: 500;
 }
 
-.Feedback__bar > button {
+.Form label {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  margin: 10px auto;
+}
+
+.Form input {
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid teal;
+  outline: none;
+  border-radius: 5px;
+}
+.Form input:focus,
+.Form input:hover {
+  box-shadow: 1px 2px 2px 1px rgb(0 128 128 / 0.6);
+}
+
+.button {
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
-  background-color: yellow;
-  width: calc(100% / 4);
-  margin: 5px;
+  padding: 10px;
+  background-color: teal;
+  color: #fff;
   font-weight: 500;
+  width: calc(100% / 3);
+  margin: 10px auto;
   font-family: inherit;
   cursor: pointer;
   outline: none;
   box-shadow: 1px 2px 2px 0 rgb(0 0 0 / 0.5);
 }
-.Feedback__bar > button:first-child {
-  background-color: green;
-  color: #fff;
-}
-.Feedback__bar > button:last-child {
-  background-color: red;
-  color: #fff;
-}
-.statistic {
-  list-style: none;
-  text-align: left;
+.button:hover {
+  box-shadow: 1px 2px 2px 1px rgb(0 128 128 / 0.6);
 }
