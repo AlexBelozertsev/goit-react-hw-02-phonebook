@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from './Form.module.css';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 class Form extends Component {
   state = {
@@ -22,25 +23,30 @@ class Form extends Component {
     this.setState({ name: '', number: '' });
   };
 
+  nameInputId = uuidv4();
+  phoneInputId = uuidv4();
+
   render() {
     return (
       <>
         <form className={style.Form} onSubmit={this.handleSubmit}>
-          <label>
+          <label htmlFor={this.nameInputId}>
             Name:
             <input
               type="text"
               name="name"
               value={this.state.name}
+              id={this.nameInputId}
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label htmlFor={this.phoneInputId}>
             Phone:
             <input
               type="tel"
               name="number"
               value={this.state.number}
+              id={this.phoneInputId}
               onChange={this.handleChange}
             />
           </label>
